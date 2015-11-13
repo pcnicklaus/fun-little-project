@@ -23,6 +23,8 @@ $(document).on('ready', function() {
 $('#search-submit').on('click', function (e) {
   e.preventDefault();
   console.log('firing');
+  var toTranslate = $('#pirate-speak').val().toLowerCase().trim();
+  console.log(toTranslate)
   // var toTranslate = $('#pirate-speak').val().trim();
   // console.log(toTranslate);
   // var payload = {toTranslate:toTranslate};

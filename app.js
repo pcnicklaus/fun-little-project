@@ -9,7 +9,7 @@ var swig = require('swig');
 
 
 // *** routes *** //
-var routes = require('./routes/index.js');
+var routes = require('./server/routes/index.js');
 
 
 // *** express instance *** //
@@ -23,7 +23,7 @@ app.set('view engine', 'html');
 
 
 // *** static directory *** //
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'server/views'));
 
 
 // *** config middleware *** //
@@ -31,7 +31,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../client/public')));
+app.use(express.static(path.join(__dirname, '../client')));
 
 
 // *** main routes *** //
