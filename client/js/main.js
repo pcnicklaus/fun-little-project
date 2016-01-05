@@ -25,13 +25,13 @@ $('#search-submit').on('click', function (e) {
   console.log('firing');
   var toTranslate = $('#pirate-speak').val().toLowerCase().trim();
   console.log(toTranslate)
-  // var toTranslate = $('#pirate-speak').val().trim();
-  // console.log(toTranslate);
-  // var payload = {toTranslate:toTranslate};
-  // console.log(payload);
-  // $.post('/pirate', payload, function(data) {
-  //   console.log(data);
-  // });
+  var toTranslate = $('#pirate-speak').val().trim();
+  console.log(toTranslate);
+  var payload = {toTranslate:toTranslate};
+  console.log(payload);
+  $.post('/pirate', payload, function(data) {
+    console.log(data);
+  });
 });
 
 

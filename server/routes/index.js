@@ -6,16 +6,16 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/pirate/:toTranslate', function(req, res, next) {
+router.post('/pirate', function(req, res, next) {
   console.log('firing')
   console.log(req.body);
   var searchString = req.body.toTranslate;
   console.log(searchString);
-  request('http://isithackday.com/arrpi.php?text=' + searchString + '?', function (error, data) {
-    if (!error && response.statusCode == 200) {
-      var pirate = data;
-      console.log(pirate);
-      res.render(pirate);
+  request('http://isithackday.com/arrpi.php?text=do you know where i can meet women around here?', function (error, response, body) {
+    if (!error) {
+      // var pirate = body;
+      console.log(response, '<body>');
+      // res.render(pirate);
 
     }
   });
