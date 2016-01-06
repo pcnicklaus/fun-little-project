@@ -31,7 +31,7 @@ $('#search-submit').on('click', function (e) {
   console.log(payload);
   $.post('/pirate', payload, function(data) {
     console.log(data);
-    $('#result').append(data.translated_text.toLowerCase());
+    $('.results-area').append(data);
 
   });
 });
