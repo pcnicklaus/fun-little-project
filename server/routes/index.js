@@ -11,11 +11,12 @@ router.post('/pirate', function(req, res, next) {
   console.log(req.body);
   var searchString = req.body.toTranslate;
   console.log(searchString);
-  request('http://isithackday.com/arrpi.php?text=do you know where i can meet women around here?', function (error, response, body) {
+  request('http://isithackday.com/arrpi.php?text=' + searchString + '&format=json', function (error, response, body) {
     if (!error) {
       // var pirate = body;
-      console.log(response, '<body>');
-      // res.render(pirate);
+      console.log(response, '<response>');
+      console.log(body, '< body')
+      res.json(body);
 
     }
   });
