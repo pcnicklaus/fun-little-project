@@ -16,7 +16,7 @@ router.post('/pirate', function(req, res, next) {
       // var pirate = body;
       console.log(response, '<response>');
       console.log(body, '< body')
-      res.json(body);
+      res.json(JSON.parse(body));
 
     }
   });

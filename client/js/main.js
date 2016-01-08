@@ -30,9 +30,9 @@ $('#search-submit').on('click', function (e) {
   var payload = {toTranslate:toTranslate};
   console.log(payload);
   $.post('/pirate', payload, function(data) {
-    console.log(data);
-    $('.results-area').append(data);
-
+    console.log(data.translation.pirate);
+    $('#pirate-speak').val('');
+    $('.results-area').html('<h5>' + data.translation.pirate + '</h5>');
   });
 });
 
