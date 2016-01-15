@@ -17,7 +17,6 @@ router.post('/pirate', function(req, res, next) {
       console.log(response, '<response>');
       console.log(body, '< body')
       res.json(JSON.parse(body));
-
     }
   });
 });
